@@ -2,7 +2,7 @@ name: Publish Docker image on Release
 on:
   release:
     types: [published]
-jobs:
+jobs:  
   push_to_registry:
     environment: dockerhub
     name: Push Docker image to Docker Hub

@@ -1,8 +1,10 @@
 name: Publish Docker image on Release
-on:
-  push:
-    branches: [ main ]  
+on:  
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
 jobs:
+  if: github.event.pull_request.merged == true
   push_to_registry:
     environment: dockerhub
     name: Push Docker image to Docker Hub
