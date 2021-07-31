@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  roon-server:
+    image: ez2raven/roon-server:latest
+    container_name: roon-server
+    hostname: roon-server
+    restart: unless-stopped
+    environment:
+      - TZ="Asia/Singapore"
+    volumes:
+      - ./app:/app
+      - ./data:/data
+      - ./music:/music
+      - ./backup:/backup
+      - ./asound.state:/var/lib/alsa/asound.state
+    
