@@ -4,6 +4,7 @@ on:
     types: [published]
 jobs:
   push_to_registry:
+    environment: dockerhub
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
@@ -33,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ez2raven/roon-server:ubuntu-20.04-beta, ez2raven/roon-server:latest
+          tags: ez2raven/roon-server:${{ github.event.release.tag_name }}, ez2raven/roon-server:latest
           labels: ${{ steps.docker_meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
