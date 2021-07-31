@@ -9,10 +9,8 @@ ENV ROON_SERVER_PKG RoonServer_linuxx64.tar.bz2
 ENV ROON_SERVER_URL http://download.roonlabs.com/builds/${ROON_SERVER_PKG}
 ENV ROON_DATAROOT /data
 ENV ROON_ID_DIR /data
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
-ENV LC_ALL en_US.UTF-8
-
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
 
 VOLUME [ "/app", "/data", "/music", "/backup" ]
 
