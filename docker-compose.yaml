@@ -14,8 +14,3 @@ services:
       - ./roon-data:/data
       - ./roon-music:/music
       - ./roon-backups:/backup
-volumes:
-  roon-app:
-  roon-data:
-  roon-backups:
-  roon-music:
