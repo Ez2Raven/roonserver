@@ -25,7 +25,7 @@ EXPOSE 30000-30010/tcp
 #  - RAAT
 EXPOSE 9100-9200/tcp
 # ROON ARC
-EXPOSE 42839/tcp
+EXPOSE 43521/tcp
 
 ENV ROON_SERVER_PKG RoonServer_linuxx64.tar.bz2
 ENV ROON_SERVER_URL http://download.roonlabs.com/builds/${ROON_SERVER_PKG}
