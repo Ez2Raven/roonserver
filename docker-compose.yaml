@@ -1,9 +1,6 @@
 services:
   roon-server:
     image: ez2raven/roon-server:latest
-    build:
-      context: .
-      dockerfile: ./Dockerfile
     container_name: roon-server
     network_mode: "host"
     restart: always
