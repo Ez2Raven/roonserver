@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
 RUN apt-get update -q \
+  && apt-get upgrade -y -q \
   && apt-get install --no-install-recommends -y -q \
     ffmpeg \
     libasound2 \
