@@ -14,6 +14,7 @@ RUN apt-get update -q \
     usbutils \
     udev \
     locales \
+    tzdata \
   && apt-get -q -y clean \
   && rm -rf /var/lib/apt/lists/*
 
