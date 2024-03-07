@@ -15,6 +15,8 @@ RUN apt-get update -q \
     udev \
     locales \
     tzdata \
+    ca-certificates \
+  && update-ca-certificates \
   && apt-get -q -y clean \
   && rm -rf /var/lib/apt/lists/*
 
